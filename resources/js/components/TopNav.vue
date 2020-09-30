@@ -30,6 +30,9 @@
                   <router-link class="text-decoration-none" to="/products">Products</router-link>
                 </b-nav-item>
                 <b-nav-item class="text-uppercase mr-5">
+                  <router-link class="text-decoration-none" to="/blog">Blog</router-link>
+                </b-nav-item>
+                <b-nav-item class="text-uppercase mr-5">
                   <router-link class="text-decoration-none" to="/contacts">Contacts</router-link>
                 </b-nav-item>
               </b-navbar-nav>

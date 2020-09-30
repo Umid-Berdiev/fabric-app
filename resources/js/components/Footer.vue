@@ -10,22 +10,22 @@
           <div class="social">
             <ul>
               <li>
-                <a href="https://facebook.com/textile-export">
+                <a href="#">
                   <img src="/images/social-icons/Facebook.png" alt="facebook-image">
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/textile-export">
+                <a href="#">
                   <img src="/images/social-icons/Twitter.png" alt="twitter-image">
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/textile-export">
+                <a href="#">
                   <img src="/images/social-icons/Instagram.png" alt="instagram-image">
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/textile-export">
+                <a href="#">
                   <img src="/images/social-icons/Linkedin.png" alt="linkedin-image">
                 </a>
               </li>
@@ -36,43 +36,46 @@
           <b-col class="border-bottom text-left mb-5">
             <h3>Say hello</h3>
           </b-col>
-            <b-form>
+            <b-form @submit.prevent="sendMsg">
               <b-form-group>
                 <b-form-input
                   id="name"
-                  v-model="form.name"
+                  v-model="fields.userName"
                   required
-                  placeholder="Name"
+                  placeholder="Your name"
                 />
               </b-form-group>
               <b-form-group>
                 <b-form-input
                   id="email"
-                  v-model="form.email"
+                  v-model="fields.userEmail"
                   type="email"
                   required
-                  placeholder="Email"
+                  placeholder="Your email"
                 />
               </b-form-group>
               <b-form-group>
                 <b-form-textarea
                   id="textarea"
-                  v-model="form.message"
-                  placeholder="Message..."
+                  v-model="fields.userMsg"
+                  required
+                  placeholder="Your message..."
                   rows="5"
                 />
               </b-form-group>
-            <b-button class="float-right" type="submit">Submit</b-button>
+            <b-button class="float-right btn btn-primary" type="submit">
+              <b-spinner v-if="isLoading" small type="grow"></b-spinner> Submit
+            </b-button>
           </b-form>
         </b-col>
         <b-col md="4" class="text-left">
           <b-col class="border-bottom text-left mb-5">
-            <h3>Our office</h3>
+            <h3>Our contacts</h3>
           </b-col>
           <b-icon-phone font-scale="2"></b-icon-phone>
-          <span>+(998) 98-765-4321</span>
-          <p>E-mail: <a href="#">info@textile-export.uz</a></p>
-          <p>A.Temur st.17, Tashkent, Uzbekistan</p>
+          <span>(+998) 97 770 44 66</span>
+          <p>E-mail: <a href="mailto:info@textile-export.uz">info@textile-export.uz</a></p>
+          <p>Address: Uzbekistan, Tashkent region, Yukarichirchik district, Arganchi Guliston MFY, small industrial zone</p>
         </b-col>
       </b-row>
 		</b-container>
@@ -93,13 +96,35 @@ export default {
   components: { BIconPhone },
   data() {
     return {
-      form: {
-        name: '',
-        email: '',
-        message: ''
-      },
+      fields: {},
+      isLoading: false,
     }
-  }
+  },
+  methods: {
+    sendMsg() {
+      this.isLoading = true
+      axios.post("/contact", this.fields)
+        .then(response => {
+          if(response.data == "OK") {
+            this.isLoading = false
+            this.fields = {}
+            this.makeToast()
+          }
+        })
+        .catch(err => {
+          this.isLoading = false
+          alert('Error with sending message, please try later!')
+        })
+    },
+    makeToast() {
+      this.$bvToast.toast('We\'ll contact you soon!', {
+        title: 'Message sent successfully!',
+        variant: 'success',
+        solid: true,
+        toaster: 'b-toaster-top-center'
+      })
+    }
+  },
 }
 </script>
 

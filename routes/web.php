@@ -17,6 +17,8 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('{ slug }', function () {
+Route::post('/contact', 'App\Http\Controllers\ContactFormController@store');
+
+Route::get('/{slug}', function () {
   return view('welcome');
 });

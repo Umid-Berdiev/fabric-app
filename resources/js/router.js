@@ -35,6 +35,9 @@ const routes = [
     path: '/contacts',
     component: Contacts,
   },
+
+  // otherwise redirect to home
+  { path: '*', redirect: '/' }
 ]
 
 export default new VueRouter({

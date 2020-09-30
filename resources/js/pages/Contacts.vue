@@ -5,24 +5,25 @@
     <div class="container">
       <h2>Get In Touch</h2>
       <div class="contact-form">
-        <form method="post">
+        <form @submit.prevent="sendMsg">
           <div class="row">
             <div class="col-md-6">
-              <label for="userName">NAME</label>
-              <input id="userName" name="userName" type="text" class="form-control">
-              <label for="userEmail">E-MAIL</label>
-              <input id="userEmail" name="userEmail" type="email" class="form-control">
+              <label for="userName">YOUR NAME</label>
+              <input required id="userName" name="userName" v-model="fields.userName" type="text" class="form-control">
+              <label for="userEmail">YOUR E-MAIL</label>
+              <input required id="userEmail" name="userEmail" v-model="fields.userEmail" type="email" class="form-control">
             </div>
             <div class="col-md-6">					    	
-              <label for="userMsg">SUBJECT</label>
-              <textarea id="userMsg" class="form-control" name="userMsg" rows="4"></textarea>
+              <label for="userMsg">YOUR MESSAGE</label>
+              <textarea required id="userMsg" class="form-control" name="userMsg" v-model="fields.userMsg" rows="4"></textarea>
             </div>
             <div class="col-auto ml-auto mt-3">
-              <button type="submit" class="btn btn-sm btn-primary px-3">Submit</button>
+              <button type="submit" class="btn btn-sm btn-primary px-3">
+                <b-spinner v-if="isLoading" small type="grow"></b-spinner> Submit
+              </button>
             </div>
           </div>
         </form>
-        <div class="clear"></div>
       </div>
       <!---728x90--->
       <div class="content_bottom row">
@@ -30,17 +31,17 @@
           <h2>Location</h2>
           <p>small industry zone,</p>
           <p>Arganchi Guliston MFY,</p>
-          <p>Yukori-chirchik district,</p>
+          <p>Yukarichirchik district,</p>
           <p>Tashkent region, Uzbekistan</p>
-          <p>Phone:(00) 222 666 444</p>
-          <p>Fax: (000) 000 00 00 0</p>
+          <p>Phone:(+998) 97 770 44 66</p>
+          <!-- <p>Fax: (000) 000 00 00 0</p> -->
           <p>Email: <span><a href="mailto:info@textile-export.uz">info@textile-export.uz</a></span></p>
           <p>Follow on: <span><a href="#">Facebook</a></span>, <span><a href="#">Twitter</a></span></p>
         </div>
         <div class="col-9">
           <h2>Find Us Here</h2>
           <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60351.66344107128!2d69.4700960634154!3d41.377963101840834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1600889154365!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57081.40899946041!2d69.44794671747769!3d41.24416754398909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5760ec0254a1%3A0x9358ba99d9bfc1ee!2sKolkhoz%20Pravda%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1601298427964!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
         <div class="clear"></div>
@@ -55,9 +56,35 @@ export default {
   name:'Contacts',
   data() {
     return {
-      // 
+      fields: {},
+      isLoading: false,
     }
-  }
+  },
+  methods: {
+    sendMsg() {
+      this.isLoading = true
+      axios.post("/contact", this.fields)
+        .then(response => {
+          if(response.data == "OK") {
+            this.isLoading = false
+            this.fields = {}
+            this.makeToast()
+          }
+        })
+        .catch(err => {
+          this.isLoading = false
+          alert('Error with sending message, please try later!')
+        })
+    },
+    makeToast() {
+      this.$bvToast.toast('We\'ll contact you soon!', {
+        title: 'Message sent successfully!',
+        variant: 'success',
+        solid: true,
+        toaster: 'b-toaster-top-center'
+      })
+    }
+  },
 }
 </script>
 
