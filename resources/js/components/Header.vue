@@ -5,18 +5,18 @@
     <!-- Header -->
     <div v-show="this.$route.path == '/'" class="container-fluid m-0">
       <div class="row justify-content-center" style="height: 75vh;">
-        <div class="col-md-5 my-auto text-white text-center">
+        <div class="col-md-6 my-auto text-white text-center">
           <h1 class="text-uppercase text-warning">Welcome!</h1>
           <section>
             <!-- Swiper -->
             <div class="swiper-container">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper mb-5">
                 <div class="swiper-slide">
                   <h2 class="text-uppercase">Offering a broad range of textile products</h2>
                   <button class="btn btn-warning text-white">click here!</button>
                 </div>
                 <div class="swiper-slide">
-                  <h2 class="text-uppercase">We are the leaders in the world of textile! </h2>
+                  <h2 class="text-uppercase">We are one of the leaders in the world of textile! </h2>
                   <button class="btn btn-warning text-white">click here!</button>
                 </div>
                 <div class="swiper-slide">
@@ -101,7 +101,8 @@
 
 <script>
   import TopNav from './TopNav'
-  import Swiper from 'swiper'
+  
+  import Swiper from 'swiper/bundle'
   import 'swiper/swiper-bundle.min.css'
 
   export default {
@@ -116,14 +117,17 @@
       this.swiper = new Swiper('.swiper-container', {
         centeredSlides: true,
         autoplay: {
-          delay: 2000,
+          delay: 3000,
         },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
       });
-
+      this.swiper.pagination.bullets.forEach(bullet => {
+        bullet.style.width = '12px'
+        bullet.style.height = '12px'
+      });
     }
   }
 </script>
@@ -132,6 +136,10 @@
   .headerContent {
     background: url(/images/headerBg.webp) center 0 no-repeat;
     background-size: cover;
+  }
+  .swiper-pagination.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
   }
   .introImage {
     background-color: black;

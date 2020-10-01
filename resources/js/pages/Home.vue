@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Main Top -->
-    <b-container fluid class="py-5" style="background: #f0f0f0;">
-      <b-card no-body class="overflow-hidden m-auto bg-transparent border-0 my-5" style="width:90%;">
+    <b-container fluid class="p-md-5 py-3" style="background: #f0f0f0;">
+      <b-card no-body class="overflow-hidden bg-transparent border-0 m-md-5">
         <b-row no-gutters>
           <b-col md="4">
             <b-card-img src="/images/page1-img1.jpg" alt="Image" class="rounded-0"></b-card-img>
           </b-col>
           <b-col md="8">
-            <b-card-body>
+            <b-card-body class="py-0">
               <b-card-title>
                 <h1>We strive to meet  your everyday textile needs</h1>
               </b-card-title>
@@ -24,8 +24,8 @@
     </b-container>
     <!-- Main Content Row -->
     <b-container fluid class="py-5">
-      <b-card-group deck class="mb-3 mx-auto" style="width:95%;">
-        <b-card class="border-0">
+      <b-card-group deck class="mb-3 mx-md-5">
+        <b-card class="border-0 mx-0">
           <b-card-header class="bg-transparent px-0">
             <h2>Who We Are</h2>
           </b-card-header>
@@ -35,7 +35,7 @@
             <a href="#" class="btn btn-secondary">MORE</a>
           </b-card-body>
         </b-card>
-        <b-card class="border-0">
+        <b-card class="border-0 mx-0">
           <b-card-header class="bg-transparent px-0">
             <h2>Markets We Serve</h2>
           </b-card-header>
@@ -46,8 +46,8 @@
           </b-card-body>
         </b-card>
       </b-card-group>
-      <b-card-group deck class="mb-3 mx-auto" style="width:95%;">
-        <b-card class="border-0">
+      <b-card-group deck class="mb-3 mx-md-5">
+        <b-card class="border-0 mx-0">
           <b-card-header class="bg-transparent px-0">
             <h2>Featured Fabrics</h2>
           </b-card-header>
@@ -57,7 +57,7 @@
             <a href="#" class="btn btn-secondary">MORE</a>
           </b-card-body>
         </b-card>
-        <b-card class="border-0">
+        <b-card class="border-0 mx-0">
           <b-card-header class="bg-transparent px-0">
             <h2>Meet the Team</h2>
           </b-card-header>
@@ -73,7 +73,7 @@
     <b-container fluid id="mainbottom-row" class="py-5 text-white">
       <b-row cols="1" align-h="center" class="my-4">
         <b-col class="text-center">
-          <h1 class="text-uppercase display-3 font-weight-normal">Creating</h1>
+          <h1 class="text-uppercase display-4 font-weight-normal">Creating</h1>
         </b-col>
         <b-col class="text-center">
           <h1 class="text-uppercase col-12">the best textile solutions</h1>
@@ -108,22 +108,22 @@
       <b-list-group horizontal="md" class="justify-content-between py-md-5 py-2">
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand1.png" alt="brand" class="mw-100">
+            <img src="/images/arzootex.png" alt="brand" height="100" class="mw-100">
           </a>
         </b-list-group-item>
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand2.png" alt="brand" class="mw-100">
+            <img src="/images/uztex.png" alt="brand" height="100" class="mw-100">
           </a>
         </b-list-group-item>
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand3.png" alt="brand" class="mw-100">
+            <img src="/images/jizzakhtex.png" alt="brand" height="100" class="mw-100">
           </a>
         </b-list-group-item>
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand4.png" alt="brand" class="mw-100">
+            <img src="/images/mergantex.png" alt="brand" height="100" class="mw-100">
           </a>
         </b-list-group-item>
       </b-list-group>
