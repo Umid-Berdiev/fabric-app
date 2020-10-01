@@ -3,8 +3,8 @@
 	<div class="footer">
 		<b-container class="align-items-start">
       <b-row>
-        <b-col md="4">
-          <b-col class="border-bottom text-left mb-5">
+        <b-col md="4" class="mb-3">
+          <b-col class="border-bottom text-left mb-md-5">
             <h3>Keep connected</h3>
           </b-col>
           <div class="social">
@@ -32,8 +32,8 @@
             </ul>
           </div>
         </b-col>
-        <b-col md="4">
-          <b-col class="border-bottom text-left mb-5">
+        <b-col md="4" class="mb-3">
+          <b-col class="border-bottom text-left mb-md-5">
             <h3>Say hello</h3>
           </b-col>
             <b-form @submit.prevent="sendMsg">
@@ -68,8 +68,8 @@
             </b-button>
           </b-form>
         </b-col>
-        <b-col md="4" class="text-left">
-          <b-col class="border-bottom text-left mb-5">
+        <b-col md="4" class="text-left mb-3">
+          <b-col class="border-bottom text-left mb-md-5">
             <h3>Our contacts</h3>
           </b-col>
           <b-icon-phone font-scale="2"></b-icon-phone>
@@ -79,9 +79,11 @@
         </b-col>
       </b-row>
 		</b-container>
-		<b-container class="justify-content-start">
+		<b-container>
       <b-row>
-				© 2020 Textile Export. All Rights Reserved
+        <b-col>
+          © 2020 Textile Export. All Rights Reserved
+        </b-col>
       </b-row>
 		</b-container>
 	</div>

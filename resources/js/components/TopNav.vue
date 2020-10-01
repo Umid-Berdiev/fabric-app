@@ -3,16 +3,16 @@
     <div class="container">
       <div class="row">
         <!-- Logo -->
-        <div id="logo" class="col-md-3">
+        <div id="logo" class="col-md-3 col-6 bg-info">
           <router-link to="/" class="text-decoration-none text-white">
-            <h2 class="bg-info p-5 mb-0">
+            <h2 class="p-2 p-md-3 p-lg-4">
               <span>TEXTILE</span>
               <hr class="m-0 bg-white">
               <span>EXPORT</span>
             </h2>
           </router-link>
         </div>
-        <div class="col-md-9 my-auto">
+        <div class="col-md-9 col-6 my-auto">
           <b-navbar toggleable="lg" type="dark" variant="">
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>

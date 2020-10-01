@@ -88,42 +88,42 @@
     </b-container>
     <!-- Bottom -->
     <b-container fluid id="bottom-row" class="text-white">
-      <b-row align-h="around" class="p-md-5 p-3">
-        <b-col sm="3">
-          <img src="/images/icon4.png" alt="icon1" class="float-md-right my-2">
-          <h3 class="float-left">AWARDS AND<br>HISTORY</h3>
+      <b-row align-h="around" class="p-lg-5 p-3">
+        <b-col md="3">
+          <img src="/images/icon4.png" alt="icon1" class="float-xl-right my-2">
+          <h3 class="float-xl-left">AWARDS AND<br>HISTORY</h3>
         </b-col>
-        <b-col sm="3" class="border-left border-secondary">
-          <img src="/images/icon5.png" alt="icon1" class="float-md-right my-2">
-          <h3 class="float-left">VISION AND<br>MISSION</h3>
+        <b-col md="3" class="border-left border-secondary">
+          <img src="/images/icon5.png" alt="icon2" class="float-xl-right my-2">
+          <h3 class="float-xl-left">VISION AND<br>MISSION</h3>
         </b-col>
-        <b-col sm="3" class="border-left border-secondary">
-          <img src="/images/icon6.png" alt="icon1" class="float-md-right my-2">
-          <h3 class="float-left">QUALITY<br>ASSURANCE</h3>
+        <b-col md="3" class="border-left border-secondary">
+          <img src="/images/icon6.png" alt="icon3" class="float-xl-right my-2">
+          <h3 class="float-xl-left">QUALITY<br>ASSURANCE</h3>
         </b-col>
       </b-row>
     </b-container>
     <!-- Partners row -->
     <b-container>
-      <b-list-group horizontal="md" class="justify-content-between py-5">
+      <b-list-group horizontal="md" class="justify-content-between py-md-5 py-2">
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand1.png" alt="brand">
+            <img src="/images/brand1.png" alt="brand" class="mw-100">
           </a>
         </b-list-group-item>
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand2.png" alt="brand">
+            <img src="/images/brand2.png" alt="brand" class="mw-100">
           </a>
         </b-list-group-item>
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand3.png" alt="brand">
+            <img src="/images/brand3.png" alt="brand" class="mw-100">
           </a>
         </b-list-group-item>
         <b-list-group-item class="border-0">
           <a href="#">
-            <img src="/images/brand4.png" alt="brand">
+            <img src="/images/brand4.png" alt="brand" class="mw-100">
           </a>
         </b-list-group-item>
       </b-list-group>

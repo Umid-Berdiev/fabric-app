@@ -131,6 +131,7 @@
 <style scoped>
   .headerContent {
     background: url(/images/headerBg.webp) center 0 no-repeat;
+    background-size: cover;
   }
   .introImage {
     background-color: black;

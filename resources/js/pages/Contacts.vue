@@ -27,7 +27,7 @@
       </div>
       <!---728x90--->
       <div class="content_bottom row">
-        <div class="col-3">
+        <div class="col-lg-3 col-md-4">
           <h2>Location</h2>
           <p>small industry zone,</p>
           <p>Arganchi Guliston MFY,</p>
@@ -38,7 +38,7 @@
           <p>Email: <span><a href="mailto:info@textile-export.uz">info@textile-export.uz</a></span></p>
           <p>Follow on: <span><a href="#">Facebook</a></span>, <span><a href="#">Twitter</a></span></p>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9 col-md-8">
           <h2>Find Us Here</h2>
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57081.40899946041!2d69.44794671747769!3d41.24416754398909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5760ec0254a1%3A0x9358ba99d9bfc1ee!2sKolkhoz%20Pravda%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1601298427964!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
