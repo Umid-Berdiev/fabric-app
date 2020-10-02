@@ -1,0 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+#back-top {
+  display: block;
+  position: fixed;
+  bottom: 70px;
+  right: 30px;
+  z-index: 99;
+}

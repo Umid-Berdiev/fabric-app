@@ -6,6 +6,7 @@
     <meta name="keywords" content="textile-export, textile export, textile-export.uz, textile export uz">
     <meta name="description" content="textile-export, textile export, textile-export.uz, textile export uz">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
     <title>Textile-Export</title>
       
@@ -14,7 +15,6 @@
     <div id="app">
       <master />
     </div>
-    
     <script src="{{ asset('/js/app.js') }}"></script>
   </body>
 </html>

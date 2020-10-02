@@ -128,13 +128,6 @@
         </b-list-group-item>
       </b-list-group>
     </b-container>
-
-    <!-- Back to top button -->
-    <div id="back-top" style="display: block;">
-      <a href="#">
-        <b-icon-arrow-up-circle font-scale="3" variant="secondary"></b-icon-arrow-up-circle>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -153,12 +146,6 @@ export default {
 }
 #bottom-row {
   background: #252525;
-}
-#back-top {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  z-index: 99;
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
