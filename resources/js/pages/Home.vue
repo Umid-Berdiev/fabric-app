@@ -89,15 +89,15 @@
     <!-- Bottom -->
     <b-container fluid id="bottom-row" class="text-white">
       <b-row align-h="around" class="p-lg-5 p-3">
-        <b-col md="3">
+        <b-col md="3" class="my-3">
           <img src="/images/icon4.png" alt="icon1" class="float-xl-right my-2">
           <h3 class="float-xl-left">AWARDS AND<br>HISTORY</h3>
         </b-col>
-        <b-col md="3" class="border-left border-secondary">
+        <b-col md="3" class="my-3 left-border">
           <img src="/images/icon5.png" alt="icon2" class="float-xl-right my-2">
           <h3 class="float-xl-left">VISION AND<br>MISSION</h3>
         </b-col>
-        <b-col md="3" class="border-left border-secondary">
+        <b-col md="3" class="my-3 left-border">
           <img src="/images/icon6.png" alt="icon3" class="float-xl-right my-2">
           <h3 class="float-xl-left">QUALITY<br>ASSURANCE</h3>
         </b-col>
@@ -159,6 +159,12 @@ export default {
   bottom: 90px;
   right: 20px;
   z-index: 99;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .left-border {
+    border-left: 1px solid #dee2e6 !important;
+  }
 }
 
 </style>

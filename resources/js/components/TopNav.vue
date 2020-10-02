@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <!-- Logo -->
-        <div id="logo" class="col-md-3 col-6 bg-info">
+        <div id="logo" class="col-md-3 col-6">
           <router-link to="/" class="text-decoration-none text-white">
             <h2 class="p-2 p-md-3 p-lg-4">
               <span>TEXTILE</span>
@@ -51,6 +51,9 @@ export default {
 </script>
 
 <style scoped>
+#logo {
+  background-color: rgba(0, 0, 0, .5);
+}
 .nav-item a {
   color: #fff;
 }

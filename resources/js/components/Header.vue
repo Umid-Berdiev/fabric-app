@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="row text-white text-center py-3" style="background: rgba(0,0,0,0.5)">
-        <article class="col-md-4 border-right">
+        <article class="col-md-4 my-5 my-md-3 right-border">
           <!-- Item title -->
           <h4>Certifications</h4>
           <h4>&amp; environment</h4>
@@ -51,7 +51,7 @@
           </div>
           <div class="clearfix"></div>
         </article>
-        <article class="col-md-4 border-right">
+        <article class="col-md-4 my-5 my-md-3 right-border">
           <!-- Item title -->
           <h4>Fabric</h4> 
           <h4>specifications</h4> 
@@ -71,7 +71,7 @@
           </div>
           <div class="clearfix"></div>  
         </article>
-        <article class="col-md-4">
+        <article class="col-md-4 my-5 my-md-3">
 
           <!-- Item title -->
           <h4>Fabric</h4> 
@@ -153,5 +153,11 @@
   }
   .introImage:hover {
     background-color: #7d625b;
+  }
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .right-border {
+      border-right: 1px solid #dee2e6 !important;
+    }
   }
 </style>

@@ -18,7 +18,7 @@ class ContactFormController extends Controller
 
     Mail::raw(request('userMsg'), function ($message) {
         $message->from(request('userEmail'), request('userName'));
-        $message->to('umid-berdiev82@mail.ru', 'Umid Berdiev');
+        $message->to('info@textile-export.uz', 'Umid Berdiev');
         $message->subject('Message from site visiter');
     });
     return response()->json("OK");
