@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
     <title>Textile-Export</title>
-      
   </head>
   <body>
     <div id="app">
